@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "@sentry/node": "^5.0.8",
