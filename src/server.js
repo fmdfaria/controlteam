@@ -11,7 +11,7 @@ const sentryConfig = require('./config/sentry')
 class App {
   constructor () {
     this.express = express()
-    this.isDev = process.env.NODE_ENV !== 'production'
+    // this.isDev = process.env.NODE_ENV !== 'production'
 
     this.sentry()
     console.log('sentry')
