@@ -14,10 +14,15 @@ class App {
     this.isDev = process.env.NODE_ENV !== 'production'
 
     this.sentry()
+    console.log('sentry')
     this.database()
+    console.log('database')
     this.middlewares()
+    console.log('middlewares')
     this.routes()
+    console.log('routes')
     this.exception()
+    console.log('exception')
   }
 
   sentry () {
@@ -25,13 +30,10 @@ class App {
   }
 
   database () {
-    mongoose.connect(
-      databaseConfig.uri,
-      {
-        useCreateIndex: true,
-        useNewUrlParser: true
-      }
-    )
+    mongoose.connect(databaseConfig.uri, {
+      useCreateIndex: true,
+      useNewUrlParser: true
+    })
   }
 
   middlewares () {
