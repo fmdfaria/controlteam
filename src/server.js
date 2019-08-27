@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const express = require('express')
 const mongoose = require('mongoose')
 const Youch = require('youch')
@@ -12,7 +10,7 @@ class App {
   constructor () {
     this.express = express()
     // this.isDev = process.env.NODE_ENV !== 'production'
-
+    // require('dotenv').config()
     this.sentry()
     console.log('sentry')
     this.database()
