@@ -10,20 +10,14 @@ const sentryConfig = require('./config/sentry')
 
 class App {
   constructor () {
-    console.log('inicio')
     this.express = express()
     this.isDev = process.env.NODE_ENV !== 'production'
 
     this.sentry()
-    console.log('sentry')
     this.database()
-    console.log('database')
     this.middlewares()
-    console.log('middlewares')
     this.routes()
-    console.log('routes')
     this.exception()
-    console.log('exception')
   }
 
   sentry () {
